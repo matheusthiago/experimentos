@@ -1,0 +1,12 @@
+# started on Wed May 15 22:40:26 2019
+
+
+ Performance counter stats for 'R':
+
+        208.839039      task-clock (msec)         #    0.046 CPUs utilized          
+            10,826      faults                    #    0.052 M/sec                  
+                16      cs                        #    0.077 K/sec                  
+                 8      migrations                #    0.038 K/sec                  
+
+       4.553401001 seconds time elapsed
+

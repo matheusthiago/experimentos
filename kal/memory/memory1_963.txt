@@ -1,0 +1,5 @@
+MemTotal:        1844596 kB
+MemFree:         1553960 kB
+MemAvailable:    1607256 kB
+Buffers:           21732 kB
+Cached:           161008 kB
