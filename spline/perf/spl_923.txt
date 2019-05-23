@@ -1,0 +1,5 @@
+ 7370.434683 task-clock (msec) # 0.904 CPUs utilized 
+ 67,572 faults # 0.009 M/sec 
+ 1,115 cs # 0.151 K/sec 
+ 90 migrations # 0.012 K/sec 
+ 8.154806387 seconds time elapsed

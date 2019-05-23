@@ -1,12 +1,5 @@
-# started on Thu May 16 00:09:52 2019
-
-
- Performance counter stats for 'R --save':
-
-       2077.421767      task-clock (msec)         #    0.910 CPUs utilized          
-            27,325      faults                    #    0.013 M/sec                  
-               351      cs                        #    0.169 K/sec                  
-                30      migrations                #    0.014 K/sec                  
-
-       2.282764664 seconds time elapsed
-
+ 2077.421767 task-clock (msec) # 0.910 CPUs utilized 
+ 27,325 faults # 0.013 M/sec 
+ 351 cs # 0.169 K/sec 
+ 30 migrations # 0.014 K/sec 
+ 2.282764664 seconds time elapsed
