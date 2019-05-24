@@ -17,6 +17,7 @@ summary(sti)
 summary(spl)
 
 
+
 #plotagem dos gráficos relacionados ao tempo de resposta 
 interval=c(1:1260)
 plot(interval, ssa$time,col='red', xlab = "round",  ylab = "Tempo médio (s)", main = "Tempo médio de resposta" , ylim=c(min(ssa$time,spl$time,mal$time,kal$time,sti$time),max(ssa$time,spl$time,mal$time,kal$time,sti$time)))
@@ -33,7 +34,7 @@ lines(interval,sti$time, col='purple')
 
 
 
-#plot sem SSA
+
 plot(interval, spl$time,col='blue', xlab = "round", ylab = "Tempo médio (s)", main = "Tempo médio de resposta" , ylim=c(0,max(spl$time,mal$time,kal$time,sti$time)))
 points(interval,kal$time, col='orange')
 points(interval,mal$time, col='green')
@@ -44,8 +45,8 @@ lines(interval,mal$time, col='green')
 lines(interval,sti$time, col='purple')
 
 
-#plot apenas karima e stine
-plot(interval, kal$time,col='orange', xlab = "Round", ylab = "Tempo médio (s)", main = "Tempo médio de resposta" , ylim=c(0,max(kal$time,sti$time)))
+#plot karima e stine
+plot(interval, kal$time,col='orange', xlab = "Round", ylab = "Tempo médio (s)", main = "Tempo médio de resposta" , ylim=c(min(kal$time,sti$time),max(kal$time,sti$time)))
 points(interval,sti$time, col='purple')
 lines(interval,kal$time, col='orange')
 lines(interval,sti$time, col='purple')
