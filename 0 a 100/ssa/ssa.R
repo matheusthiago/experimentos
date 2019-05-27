@@ -20,32 +20,35 @@ require(Metrics)
 require(spectral.methods)
 
 
-	dadoDia=dfDados$dados[which(dfDados$dia==dia)]
-	#laço de tamanho do gap
-		#laço de divisão da série temporal (distribuição de gaps)
-		startPoint=2160
-			dadoTemp=dadoDia
-			piso=startPoint
-			teto=startPoint+n
-			dadoTemp[piso:teto]=NA #cria espaços em branco
+dadoDia=dfDados$dados[which(dfDados$dia==dia)]
+#laço de tamanho do gap
+#laço de divisão da série temporal (distribuição de gaps)
+dadoTemp=dadoDia
+piso=startPoint
+teto=startPoint+n
+dadoTemp[piso:teto]=NA #cria espaços em branco
 
 
-			##########Parte do SSA##########
-			data.filled <- gapfillSSA(amnt.artgaps = c(0.05, 0.05), DetBestIter = ".getBestIteration", series = dadoTemp, plot.results = FALSE, open.plot =FALSE, SSA.methods = c("nutrlan", "propack", "eigen", "svd"),tresh.convergence = 0.001, )
-			dt1 <- data.filled$filled.series
+##########Parte do SSA##########
+data.filled <- gapfillSSA(amnt.artgaps = c(0.05, 0.05), DetBestIter = ".getBestIteration", series = dadoTemp, plot.results = FALSE, open.plot =FALSE, SSA.methods = c("nutrlan", "propack", "eigen", "svd"),tresh.convergence = 0.001, )
+dt1 <- data.filled$filled.series
 
-			#Adaptação para não dar valores faltantes no Spline e não dar valores negativos no SSA
-				for(i in 1:length(dt1)){
-					if((dt1[i])<0 || is.na(dt1[i])){
-						dt1[i]=0
-					}
-				}
+#Adaptação para não dar valores faltantes no Spline e não dar valores negativos no SSA
+	for(i in 1:length(dt1)){
+		if((dt1[i])<0 || is.na(dt1[i])){
+			dt1[i]=0
+		}
+	}
 
-			#Calculando o erro
-			rmseSsa<-append(rmseSsa,(rmse(dadoDia[piso:teto],(dt1[piso:teto]))))
+#Calculando o erro
+rmseSsa<-append(rmseSsa,(rmse(dadoDia[piso:teto],(dt1[piso:teto]))))
 n=n+iteracao
-if (n>=4300){
-        n=100
-        dia=dia+1
+if(n>100){
+	n=1
+	startPoint=startPoint+2160
+	if(startPoint>6480){
+		startPoint=2160
+		dia=dia+1
+	}
 }
 i=i+1

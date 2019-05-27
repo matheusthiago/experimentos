@@ -1,5 +1,5 @@
 #!/bin/bash
-for it in {85..1260}
+for it in {1..9000}
 do  
 	echo "iteração="$it
 	#primeira medição da memória antes de rodar o script 
@@ -19,5 +19,5 @@ do
 			#trecho de código que faz a medição dos parametros de memória 
 			    cat /proc/meminfo | awk 'NR<=5 {print}' >> "./memory/memory_"$it".txt"&
 			done
-	#datamash mean 1 < "memory_"$it".txt" > "memory_"$it".txt" 
+	#datamash mean 1 < "memoryn_"$it".txt" > "memory_"$it".txt" 
 done

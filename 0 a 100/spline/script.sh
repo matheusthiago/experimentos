@@ -1,5 +1,5 @@
 #!/bin/bash
-for it in {1..1260}
+for it in {1..9000}
 do  
 	echo "iteração="$it
 	#primeira medição da memória antes de rodar o script 

@@ -17,36 +17,39 @@ require(greenbrown, , warn.conflicts = FALSE)
 
 #print(paste("n:",n," interação:", interacao, " dia:",dia, " i:", i))
 
-	dadoDia=dfDados$dados[which(dfDados$dia==dia)]
-	#laço de tamanho do gap
-		#laço de divisão da série temporal (distribuição de gaps)
-		startPoint=2160
-			dadoTemp=dadoDia
-			piso=startPoint
-			teto=startPoint+n
-			dadoTemp[piso:teto]=NA #cria espaços em branco
+dadoDia=dfDados$dados[which(dfDados$dia==dia)]
+#laço de tamanho do gap
+#laço de divisão da série temporal (distribuição de gaps)
+dadoTemp=dadoDia
+piso=startPoint
+teto=startPoint+n
+dadoTemp[piso:teto]=NA #cria espaços em branco
 
-			##########Parte do Spline##########
-			tss.data <- ts(dadoTemp, frequency=1, start=c(0,1))
-			tsgf <- TSGFspline(tss.data)
+##########Parte do Spline##########
+tss.data <- ts(dadoTemp, frequency=1, start=c(0,1))
+tsgf <- TSGFspline(tss.data)
 
-			#Adaptação para não dar valores faltantes no Spline e não dar valores negativos no SSA
-			for(i in 1:length(tsgf)){
-				if(is.na(tsgf[i])){
-					if(i==1)
-					tsgf[1]=0
-					else
-					tsgf[i]=tsgf[i-1]
-				}
-			}
+#Adaptação para não dar valores faltantes no Spline e não dar valores negativos no SSA
+for(i in 1:length(tsgf)){
+	if(is.na(tsgf[i])){
+		if(i==1)
+		tsgf[1]=0
+		else
+		tsgf[i]=tsgf[i-1]
+	}
+}
 
-			###################### Setando os vetores 
+###################### Setando os vetores 
 
-			#Calculando o erro
-			rmseSpl<-append(rmseSpl,(rmse(dadoDia[piso:teto],(tsgf[piso:teto]))))
+#Calculando o erro
+rmseSpl<-append(rmseSpl,(rmse(dadoDia[piso:teto],(tsgf[piso:teto]))))
 n=n+iteracao
-if (n>=4300){
-        n=100
-        dia=dia+1
+if(n>100){
+	n=1
+	startPoint=startPoint+2160
+	if(startPoint>6480){
+		startPoint=2160
+		dia=dia+1
+	}
 }
 i=i+1

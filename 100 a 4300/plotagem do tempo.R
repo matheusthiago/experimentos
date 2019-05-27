@@ -36,7 +36,7 @@ plot(tamanhoGap,mediaTempoSpl, col='blue', xlab = "tamanho do gap", ylab = "medi
 points(tamanhoGap,mediaTempoKal, col='orange')
 points(tamanhoGap,mediaTempoMal, col='green')
 points(tamanhoGap,mediaTempoSti, col='purple')
-legend(x = 'topleft', merge = TRUE, pch = c(16,16, 16,16, 16), lty = c(1,1, 1,1, 1), col = c('red', 'blue', 'orange', 'green', 'purple'), legend = c('SSA','Spline', 'Kalman Arima', 'Moving Average' ,'Stine'))
+legend(x = 'topleft', merge = TRUE, pch = c(16, 16,16, 16), lty = c(1,1, 1,1, 1), col = c('blue', 'orange', 'green', 'purple'), legend = c('Spline', 'Kalman Arima', 'Moving Average' ,'Stine'))
 lines(tamanhoGap,mediaTempoSpl, col='blue')
 lines(tamanhoGap,mediaTempoKal, col='orange')
 lines(tamanhoGap,mediaTempoMal, col='green')
@@ -47,7 +47,7 @@ lines(tamanhoGap,mediaTempoSti, col='purple')
 
 
 
-plot(tamanhoGap,mediaTempoSti, col='purple', xlab = "tamanho do gap", ylab = "mediaTempo de tempo", main = "Media tempo de respostas" , ylim=c(0,4)
+plot(tamanhoGap,mediaTempoSti, col='purple', xlab = "tamanho do gap", ylab = "mediaTempo de tempo", main = "Media tempo de respostas" , ylim=c(0,4))
 points(tamanhoGap,mediaTempoKal, col='orange')
 legend(x = 'topleft', merge = TRUE, pch = c(16, 16), lty = c(1, 1), col = c('orange','purple'), legend = c('Kalman Arima', 'Stine'))
 lines(tamanhoGap,mediaTempoKal, col='orange')

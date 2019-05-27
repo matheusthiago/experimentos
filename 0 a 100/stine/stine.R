@@ -21,26 +21,29 @@ require(imputeTS)
 
 #print(paste("n:",n," interação:", interacao, " dia:",dia, " i:", i))
 
-	dadoDia=dfDados$dados[which(dfDados$dia==dia)]
-	#laço de tamanho do gap
-		#laço de divisão da série temporal (distribuição de gaps)
-		startPoint=2160
-			dadoTemp=dadoDia
-			piso=startPoint
-			teto=startPoint+n
-			dadoTemp[piso:teto]=NA #cria espaços em branco
+dadoDia=dfDados$dados[which(dfDados$dia==dia)]
+#laço de tamanho do gap
+#laço de divisão da série temporal (distribuição de gaps)
+dadoTemp=dadoDia
+piso=startPoint
+teto=startPoint+n
+dadoTemp[piso:teto]=NA #cria espaços em branco
 
-			# Perform imputation with KalmanSmoother and state space representation of arima model
-			sti= na.interpolation(dadoTemp,option="stine")
+# Perform imputation with KalmanSmoother and state space representation of arima model
+sti= na.interpolation(dadoTemp,option="stine")
 
-			###################### Setando os vetores 
+###################### Setando os vetores 
 
-			#Calculando o erro
-			rmseSti<-append(rmseSti,(rmse(dadoDia[piso:teto],(sti[piso:teto]))))
+#Calculando o erro
+rmseSti<-append(rmseSti,(rmse(dadoDia[piso:teto],(sti[piso:teto]))))
 
 n=n+iteracao
-if (n>=4300){
-        n=100
-        dia=dia+1
+if(n>100){
+	n=1
+	startPoint=startPoint+2160
+	if(startPoint>6480){
+		startPoint=2160
+		dia=dia+1
+	}
 }
 i=i+1

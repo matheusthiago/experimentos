@@ -1,6 +1,5 @@
 #!/bin/bash
-sleep 1 #tentativa de uso do nohup
-for it in {849..1260}
+for it in {1..9000}
 do  
 	echo "iteração="$it
 	#primeira medição da memória antes de rodar o script 
