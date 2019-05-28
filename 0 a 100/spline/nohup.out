@@ -1,0 +1,380 @@
+iteração=1
+ALL PID= 15470
+PID R em uso:  15470
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=2
+ALL PID= 20090
+PID R em uso:  20090
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=3
+ALL PID= 22121
+PID R em uso:  22121
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=4
+ALL PID= 23974
+PID R em uso:  23974
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=5
+ALL PID= 25714
+PID R em uso:  25714
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=6
+ALL PID= 27402
+PID R em uso:  27402
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=7
+ALL PID= 29075
+PID R em uso:  29075
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=8
+ALL PID= 30739
+PID R em uso:  30739
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=9
+ALL PID= 32403
+PID R em uso:  32403
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=10
+ALL PID= 1627
+PID R em uso:  1627
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=11
+ALL PID= 3291
+PID R em uso:  3291
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=12
+ALL PID= 4961
+PID R em uso:  4961
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=13
+ALL PID= 6607
+PID R em uso:  6607
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=14
+ALL PID= 8273
+PID R em uso:  8273
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=15
+ALL PID= 9937
+PID R em uso:  9937
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=16
+ALL PID= 11568
+PID R em uso:  11568
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=17
+ALL PID= 13228
+PID R em uso:  13228
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=18
+ALL PID= 14869
+PID R em uso:  14869
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=19
+ALL PID= 16553
+PID R em uso:  16553
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
+iteração=20
+ALL PID= 17834
+PID R em uso:  17834
+[Previously saved workspace restored]
+
+Loading required package: zoo
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+Loading required package: Metrics
+Loading required package: greenbrown
+Loading required package: strucchange
+Loading required package: sandwich
+Loading required package: raster
+Loading required package: sp
