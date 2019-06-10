@@ -1,0 +1,17 @@
+mal=as.data.frame(read.table("memory_mal.txt"))
+kal=as.data.frame(read.table("memory_kal.txt"))
+ssa=as.data.frame(read.table("memory_ssa.txt"))
+sti=as.data.frame(read.table("memory_sti.txt"))
+spl=as.data.frame(read.table("memory_spl.txt"))
+
+names(mal)=c("memFree","memAvailable","buffers","cache")
+names(kal)=c("memFree","memAvailable","buffers","cache")
+names(ssa)=c("memFree","memAvailable","buffers","cache")
+names(sti)=c("memFree","memAvailable","buffers","cache")
+names(spl)=c("memFree","memAvailable","buffers","cache")
+
+summary(mal)
+summary(kal)
+summary(ssa)
+summary(sti)
+summary(spl)

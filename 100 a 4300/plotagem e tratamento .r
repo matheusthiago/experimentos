@@ -14,7 +14,7 @@ for (i in seq(1,42,1)) {
 }
 
 
-plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "tamanho do gap", ylab = "media RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseSpl,mediaRmseSti,mediaRmseKal, mediaRmseMal),max(mediaRmseSsa, mediaRmseSpl,mediaRmseSti,mediaRmseKal, mediaRmseMal)))
+plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "Tamanho da lacuna", ylab = "media RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseSpl,mediaRmseSti,mediaRmseKal, mediaRmseMal),max(mediaRmseSsa, mediaRmseSpl,mediaRmseSti,mediaRmseKal, mediaRmseMal)))
 
 points(tamanhoGap,mediaRmseSpl, col='blue')
 points(tamanhoGap,mediaRmseKal, col='orange')
@@ -30,7 +30,7 @@ lines(tamanhoGap,mediaRmseSti, col='purple')
 
 
 #plot sem Spl e Sti
-plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "tamanho do gap", ylab = "mediaRmse RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseKal, mediaRmseMal),max(mediaRmseSsa, mediaRmseKal, mediaRmseMal)))
+plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "Tamanho da lacuna", ylab = "mediaRmse RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseKal, mediaRmseMal),max(mediaRmseSsa, mediaRmseKal, mediaRmseMal)))
 points(tamanhoGap,mediaRmseKal, col='orange')
 points(tamanhoGap,mediaRmseMal, col='green')
 legend(x = 'topleft', merge = TRUE, pch = c(16, 16, 16), lty = c(1, 1, 1), col = c( 'red', 'orange', 'green'), legend = c('SSA', 'Kalman Arima', 'Moving Average'))
@@ -45,7 +45,7 @@ lines(tamanhoGap,mediaRmseMal, col='green')
 
 
 
-plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "tamanho do gap", ylab = "Media RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseSpl,mediaRmseSti),max(mediaRmseSsa, mediaRmseSpl,mediaRmseSti)))
+plot(tamanhoGap, mediaRmseSsa,col='red', xlab = "Tamanho da lacuna", ylab = "Media RMSE", main = "Media RMSE das lacunas" , ylim=c(min(mediaRmseSsa, mediaRmseSpl,mediaRmseSti),max(mediaRmseSsa, mediaRmseSpl,mediaRmseSti)))
 
 points(tamanhoGap,mediaRmseSpl, col='blue')
 points(tamanhoGap,mediaRmseSti, col='purple')
@@ -74,7 +74,11 @@ for (i in seq(1,42,1)) {
 }
 
 
-plot(tamanhoGap, mediaTempoSsa,col='red', xlab = "tamanho do gap", ylab = "mediaTempo", main = "Media de tempo das lacunas" , ylim=c(min(mediaTempoSsa, mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal),max(mediaTempoSsa, mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal)))
+
+
+#------------PLOTAGEM DOS GRÁFICOS RELACIONADOS AO TAMANHO DA LACUNA E O TEMPO DE EXECUÇÃO ---------------------------
+
+plot(tamanhoGap, mediaTempoSsa,col='red', xlab = "Tamanho da lacuna", ylab = "Tempo Médio", main = "Tempo médio de execuçao X tamanho da lacuna" , ylim=c(0,150))
 
 points(tamanhoGap,mediaTempoSpl, col='blue')
 points(tamanhoGap,mediaTempoKal, col='orange')
@@ -92,7 +96,7 @@ lines(tamanhoGap,mediaTempoSti, col='purple')
 
 
 # sem ssa
-plot(tamanhoGap,mediaTempoSpl, col='blue', xlab = "tamanho do gap", ylab = "mediaTempo de tempo", main = "Media tempo de respostas" , ylim=c(min(mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal),max(mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal)))
+plot(tamanhoGap,mediaTempoSpl, col='blue', xlab = "Tamanho da lacuna", ylab = "Tempo Médio de tempo", main = "Tempo médio de execuçao X tamanho da lacuna" , ylim=c(min(mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal),max(mediaTempoSpl,mediaTempoSti,mediaTempoKal, mediaTempoMal)))
 points(tamanhoGap,mediaTempoKal, col='orange')
 points(tamanhoGap,mediaTempoMal, col='green')
 points(tamanhoGap,mediaTempoSti, col='purple')
@@ -107,8 +111,51 @@ lines(tamanhoGap,mediaTempoSti, col='purple')
 
 
 
-plot(tamanhoGap,mediaTempoSti, col='purple', xlab = "tamanho do gap", ylab = "mediaTempo de tempo", main = "Media tempo de respostas" , ylim=c(0,4))
+plot(tamanhoGap,mediaTempoSti, col='purple', xlab = "Tamanho da lacuna", ylab = "Tempo Médio de tempo", main = "Tempo médio de execuçao X tamanho da lacuna" , ylim=c(0,3))
 points(tamanhoGap,mediaTempoKal, col='orange')
 legend(x = 'topleft', merge = TRUE, pch = c(16, 16), lty = c(1, 1), col = c('orange','purple'), legend = c('Kalman Arima', 'Stine'))
 lines(tamanhoGap,mediaTempoKal, col='orange')
 lines(tamanhoGap,mediaTempoSti, col='purple')
+
+#------------------------------------------------------------------------------------------------------------
+
+#correlax
+
+
+cor(mediaTempoKal, tamanhoGap)
+cor(mediaTempoSti, tamanhoGap)
+cor(mediaTempoSsa, tamanhoGap)
+cor(mediaTempoSpl, tamanhoGap)
+cor(mediaTempoMal, tamanhoGap)
+
+
+cor(mediaTempoMal, mediaRmseKal)
+cor(mediaTempoSpl, mediaRmseSpl)
+cor(mediaTempoSpl, mediaRmseSpl)
+cor(mediaTempoSsa, mediaRmseSsa)
+cor(mediaTempoMal, mediaRmseMal)
+
+
+#ajuste do modelo Linear 
+
+#Para ajustar um modelo de regressão linear no R utiliza-se a função lm
+
+ajuste=lm(mediaTempoSpl ~ tamanhoGap)
+ajuste
+
+
+plot(tamanhoGap, mediaRmseKal, xlab = "tamanho do gap", ylab = "media RMSE Kalman", main = "Diagrama de dispersão com a reta ajustada" )
+abline(lm(mediaRmseKal~tamanhoGap))
+
+
+plot(tamanhoGap, mediaRmseSsa, xlab = "tamanho do gap", ylab = "media RMSE SSA", main = "Diagrama de dispersão com a reta ajustada" )
+abline(lm(mediaRmseSsa~tamanhoGap))
+
+plot(tamanhoGap, mediaRmseSpl, xlab = "tamanho do gap", ylab = "media RMSE Spline", main = "Diagrama de dispersão com a reta ajustada" )
+abline(lm(mediaRmseSpl~tamanhoGap))
+
+plot(tamanhoGap, mediaRmseMal, xlab = "tamanho do gap", ylab = "media RMSE Moving Average", main = "Diagrama de dispersão com a reta ajustada" )
+abline(lm(mediaRmseMal~tamanhoGap))
+
+plot(tamanhoGap,mediaRmseSti, xlab = "tamanho do gap", ylab = "media RMSE Stine", main = "Diagrama de dispersão com a reta ajustada" )
+abline(lm(mediaRmseSti~tamanhoGap))
