@@ -4,21 +4,19 @@ do
 	echo "iteração="$it
 	#primeira medição da memória antes de rodar o script 
 	cat /proc/meminfo | awk 'NR<=5 {print}' >> "./memory/memory1_"$it".txt"& 
-	sudo  perf stat -e  task-clock,faults,cs,migrations   -o "./perf/ssa_"$it".txt"  R  < ssa.R  --save >/dev/null &
-	sleep 0.2 # o sleep foi utilizado por que sem ele não estava fazendo a leitura do pid do R, logo dava erro
+	sudo  perf stat -e  task-clock,faults,cs,migrations   -o "./perf/ssa1_"$it".txt"  R  < ssa.R  --save >/dev/null &
+	sleep 0.5 # o sleep foi utilizado por que sem ele não estava fazendo a leitura do pid do R, logo dava erro
 	pid_r=`pidof R -s &`
 	pid_todos=`pidof R &`
 
 	echo "ALL PID=" $pid_todos
 	echo "PID R em uso: " $pid_r
 
-
 	# enquanto o script estiver rodando façaa medição dos parâmetrsos de memória
 	while s=`ps -p $pid_r -o s=` && [[ "$s" && "$s" != 'Z' ]]
 			do
 			#trecho de código que faz a medição dos parametros de memória 
-			   cat /proc/meminfo | awk 'NR<=5 {print}' >> "./memory/memory_"$it".txt"&
-			   #sleep 500
+			    cat /proc/meminfo | awk 'NR<=5 {print}' >> "./memory/memory1_"$it".txt"&
 			done
 	#datamash mean 1 < "memory_"$it".txt" > "memory_"$it".txt" 
 done
